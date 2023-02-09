@@ -1,3 +1,5 @@
+// Se utiliza la libreria sweetalert
+
 let productos = [];
 //ruta relativa
 
@@ -14,6 +16,7 @@ let productosEnCarrito = localStorage.getItem("productos-en-carrito");
 const numeroCarrito = document.querySelector("#numero-carrito");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
+
 productosEnCarrito = JSON.parse(productosEnCarrito) || [];
 
 setTimeout(() => {
@@ -132,6 +135,7 @@ const agregarAlCarrito = (productoId) => {
 
   actualizarNumero();
 };
+//funcion para actualizar el numero del carrito de compras
 function actualizarNumero() {
   let nuevoNumeroCarrito = productosEnCarrito.reduce(
     (acc, producto) => acc + producto.cantidad,
